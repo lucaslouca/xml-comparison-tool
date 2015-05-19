@@ -1,0 +1,28 @@
+<mainDocument>
+    <events>
+        <mainEvent>
+            <action>someAction</action>
+            <object>
+                <objectNature>blah</objectNature>
+                <objectId>123456</objectId>
+            </object>
+        </mainEvent>
+    </events>
+    <contracts>
+        <contract>
+            <businessObjectId>
+                <identifier>abc</identifier>
+                <baseIdentifier>111</baseIdentifier>
+                <versionIdentifier>
+                    <versionRevision>
+                        <versionNumber>1</versionNumber>
+                        <versionDateAndTime>
+                            <date>00000000</date>
+                        </versionDateAndTime>
+                    </versionRevision>
+                </versionIdentifier>
+                <primarySystem>Test</primarySystem>
+            </businessObjectId>
+        </contract>
+    </contracts>
+</mainDocument>

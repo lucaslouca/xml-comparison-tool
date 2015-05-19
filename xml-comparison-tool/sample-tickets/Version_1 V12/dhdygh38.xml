@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<test:testDocument xmlns:test="http://www.lucaslouca.com/xml">
+	<test:testObject>
+		<test:externalReference>XYZ_abcdef</test:externalReference>
+		<test:keyword>
+			<test:name>A</test:name>
+			<test:value>1234abc</test:value>
+		</test:keyword>
+		<test:keyword>
+			<test:name>B</test:name>
+			<test:value>xxx</test:value>
+		</test:keyword>
+		<test:keyword>
+			<test:name>IMPORTANT</test:name>
+			<test:value>1</test:value>
+		</test:keyword>
+		<test:keyword>
+			<test:name>C</test:name>
+			<test:value>true</test:value>
+		</test:keyword>
+	</test:testObject>
+</test:testDocument>
