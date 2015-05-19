@@ -30,4 +30,4 @@ or using XPath expression words:
 
 ###How to build
 * Do a `mvn clean` and then a `mvn package`
-* Executables should be in *target*
+* Executables should be under *target*
