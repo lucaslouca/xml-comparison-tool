@@ -13,6 +13,9 @@ or using XPath expression words:
 * `//test:testDocument/test:testObject/test:keyword[test:name = 'IMPORTANT']/test:value` in `263t373.xml` is equal to `//mainDocument/events/mainEvent/object/objectId` in `70314.xml` and
 * `//test:testDocument/test:testObject/test:externalReference` in `263t373.xml` is equal to `//mainDocument/contracts/contract/businessObjectId/versionIdentifier/versionRevision/versionNumber` in `70314.xml`,
 
+**Screenshot**
+<img src="https://cloud.githubusercontent.com/assets/10542894/7710125/109d3990-fe62-11e4-97a1-3c1070a88e61.png"/>
+
 ###How to Import into Eclipse
 * **File** -> **Import...** -> **Existing Maven Projects**
 * Click **Next**
