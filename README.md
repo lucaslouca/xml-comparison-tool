@@ -6,8 +6,12 @@ This is a small tool that reads and parses all available .xml files in two user 
 for every XML in *sample-tickets/Version_1 V12* it tries to find a *matching* XML in *sample-tickets/Version_1 V14*, based on specified criteria.
 
 In the provided examples an XML `263t373.xml` in the *sample-tickets/Version_1 V12* has a matching xml `70314.xml` because:
-* `<test:externalReference>XYZ_00000</test:externalReference>` in `263t373.xml` has a corresponding `<objectId>00000</objectId>` in `70314.xml`
-* The sibling element `<test:value>1</test:value>` of `<test:name>IMPORTANT</test:name>` has a corresponding element value `<versionNumber>1</versionNumber>` in `70314.xml`.
+* `<test:externalReference>XYZ_00000</test:externalReference>` in `263t373.xml` has a corresponding `<objectId>00000</objectId>` in `70314.xml` and
+* the sibling element `<test:value>1</test:value>` of `<test:name>IMPORTANT</test:name>` has a corresponding element value `<versionNumber>1</versionNumber>` in `70314.xml`.
+
+or in other words:
+* `//test:testDocument/test:testObject/test:keyword[test:name = 'IMPORTANT']/test:value` in `263t373.xml` is equal to `//mainDocument/events/mainEvent/object/objectId` in `70314.xml` and
+* `//test:testDocument/test:testObject/test:externalReference` in `263t373.xml` is equal to `//mainDocument/contracts/contract/businessObjectId/versionIdentifier/versionRevision/versionNumber` in `70314.xml`,
 
 ###How to Import into Eclipse
 * **File** -> **Import...** -> **Existing Maven Projects**
