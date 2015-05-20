@@ -120,16 +120,24 @@ public abstract class AbstractTicketParser {
 	 * @return Value of first element that matches the given xpath
 	 */
 	private String getValueForElementWithXpath(String xPathExpression, Document doc) throws XPathExpressionException {
-		String result = null;
-
-		XPathFactory xPathfactory = XPathFactory.newInstance();
-		XPath xpath = xPathfactory.newXPath();
-		xpath.setNamespaceContext(nameSpaceContext);
-		XPathExpression expr = xpath.compile(xPathExpression);
-		result = (String) expr.evaluate(doc, XPathConstants.STRING);
-
-		return result;
-	}
+	        String result = null;
+	
+	        XPathFactory xPathfactory = XPathFactory.newInstance();
+	        XPath xpath = xPathfactory.newXPath();
+	        xpath.setNamespaceContext(nameSpaceContext);
+	        XPathExpression expr = xpath.compile(xPathExpression);
+	
+	        NodeList nList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+	        SEARCH_TAG_LOOP: for (int temp = 0; temp < nList.getLength(); temp++) {
+	            Node node = nList.item(temp);
+	            if (node.getNodeType() == Node.ELEMENT_NODE) {
+	                result = node.getTextContent();
+	                break SEARCH_TAG_LOOP;
+	            }
+	        }
+	
+	        return result;
+    	}
 
 	/**
 	 * Searches the given model for XMLPath and sets the value if the xpath
