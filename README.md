@@ -5,7 +5,7 @@ Quick and dirty Java Swing application to find and match XML files based on cert
 This is a small tool that reads and parses all available .xml files in two user definable directories (e.g.: *sample-tickets/Version_1 V12* and *sample-tickets/Version_1 V14*) . Then
 for every XML in *sample-tickets/Version_1 V12* it tries to find a *matching* XML in *sample-tickets/Version_1 V14*, based on specified criteria.
 
-In the provided examples an XML *263t373.xml* in the *sample-tickets/Version_1 V12* has a matching xml *70314.xml* because (XPath expressions):
+In the provided examples an XML *263t373.xml* in the *sample-tickets/Version_1 V12* has a matching xml, *70314.xml*, because (XPath expressions):
 * `//test:testDocument/test:testObject/test:keyword[test:name = 'IMPORTANT']/test:value` in *263t373.xml* is equal to `//mainDocument/events/mainEvent/object/objectId` in *70314.xml* and
 * `//test:testDocument/test:testObject/test:externalReference` in *263t373.xml* is equal to `//mainDocument/contracts/contract/businessObjectId/versionIdentifier/versionRevision/versionNumber` in *70314.xml*,
 
