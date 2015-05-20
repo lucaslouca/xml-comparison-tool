@@ -9,7 +9,7 @@ In the provided examples an XML `263t373.xml` in the *sample-tickets/Version_1 V
 * `<test:externalReference>XYZ_00000</test:externalReference>` in `263t373.xml` has a corresponding `<objectId>00000</objectId>` in `70314.xml` and
 * the sibling element `<test:value>1</test:value>` of `<test:name>IMPORTANT</test:name>` has a corresponding element value `<versionNumber>1</versionNumber>` in `70314.xml`.
 
-or using XPath expression words:
+or using XPath expressions:
 * `//test:testDocument/test:testObject/test:keyword[test:name = 'IMPORTANT']/test:value` in `263t373.xml` is equal to `//mainDocument/events/mainEvent/object/objectId` in `70314.xml` and
 * `//test:testDocument/test:testObject/test:externalReference` in `263t373.xml` is equal to `//mainDocument/contracts/contract/businessObjectId/versionIdentifier/versionRevision/versionNumber` in `70314.xml`,
 
