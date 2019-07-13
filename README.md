@@ -12,7 +12,7 @@ In the provided examples an XML *263t373.xml* in the *sample-tickets/Version_1 V
 **Screenshot**
 <img src="https://cloud.githubusercontent.com/assets/10542894/7710125/109d3990-fe62-11e4-97a1-3c1070a88e61.png"/>
 
-###How to Import into Eclipse
+### How to Import into Eclipse
 * **File** -> **Import...** -> **Existing Maven Projects**
 * Click **Next**
 * Click **Browse...** for the **Root Directory**
@@ -20,10 +20,10 @@ In the provided examples an XML *263t373.xml* in the *sample-tickets/Version_1 V
 * Click **Finish**
 * Do a mvn update on **xml-comparison-tool**
 
-###How to run
+### How to run
 * Run com.lucaslouca.main.TicketAppController.java
 * Test the tool using the sample XML files located under *sample-tickets/Version_1 V12* and *sample-tickets/Version_1 V14*
 
-###How to build
+### How to build
 * Do a `mvn clean` and then a `mvn package`
 * Executables should be under *target*
